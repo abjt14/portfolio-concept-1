@@ -1,0 +1,64 @@
+/* custom mouse css */
+:root {
+	--mouse-circle1-scale: 1;
+	--mouse-circle2-scale: 1;
+	--mouse-circle2-border: dashed;
+}
+
+#mouse-dot {
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	background: var(--color-mouse);
+	position: fixed;
+	top: 0;
+	left: 0;
+	transition: all 0s ease;
+	z-index: 999;
+	mix-blend-mode: difference;
+	pointer-events: none;
+	opacity: 0;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+#mouse-circle-1 {
+	height: 65px;
+	width: 65px;
+	border-radius: 50%;
+	border: 2px solid var(--color-mouse);
+	position: fixed;
+	top: 0;
+	left: 0;
+	transition: all 0.1s ease;
+	z-index: 999;
+	mix-blend-mode: difference;
+	pointer-events: none;
+	opacity: 0;
+	background: transparent;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+#mouse-circle-2 {
+	height: 75px;
+	width: 75px;
+	border-radius: 50%;
+	border: 1px var(--mouse-circle2-border) var(--color-mouse);
+	position: fixed;
+	top: 0;
+	left: 0;
+	transition: all 0.2s ease;
+	z-index: 999;
+	mix-blend-mode: difference;
+	pointer-events: none;
+	opacity: 0;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+/* hide default mouse */
+* {
+	cursor: none;
+}
+/* hide default mouse end */

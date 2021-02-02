@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Abhijeet Singh</title>
+
+	<style>
+		html,
+		body {
+			margin: 0;
+			height: 100%;
+			font-family: 'Montserrat', sans-serif;
+			scroll-behavior: smooth;
+			overflow-x: hidden;
+		}
+		h1, h2, p, a, .corner-div-class {
+			font-family: 'Raleway', sans-serif;
+			margin: 0;
+		}
+
+		img {
+			max-width: 100%;
+			border-radius: 5px;
+			/* box-shadow: 0px 0px 3px var(--color-picture); */
+			box-shadow: 0 1px 1px var(--color-picture),
+			0 2px 2px var(--color-picture),
+			0 4px 4px var(--color-picture),
+			0 8px 8px var(--color-picture),
+			0 16px 16px var(--color-picture);
+		}
+
+		:root {
+			--color-1: #474747;
+			--color-2: #ffffff;
+			--color-black: #000000;
+			--color-white: #ffffff;
+			--color-mouse: #ffffff;
+			--color-picture: rgba(0, 0, 0, 0.15);
+		}
+
+		/* hide scrollbar */
+		/* html {
+			overflow-y: scroll;
+			scrollbar-width: none;
+			-ms-overflow-style: none;
+		}
+
+		html::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+		} */
+		/* hide scrollbar  end*/
+
+		.corner-div-padding {
+			padding: 4rem 5rem;
+		}
+
+		#cont-top-left {
+			top: 0;
+			left: 0;
+		}
+
+		#cont-top-left #portfolio-text div p {
+			opacity: 0;
+			padding: 0.5rem 0;
+		}
+
+		#cont-bottom-left {
+			bottom: 0;
+			left: 0;
+		}
+
+		#cont-bottom-left #theme-change-text {
+			padding: 0.5rem 0;
+		}
+
+		#cont-bottom-left #theme-change-text .corner-div-padding {
+			opacity: 0;
+			text-align: right;
+		}
+
+		#cont-bottom-right {
+			bottom: 0;
+			right: 0;
+		}
+
+		.nav-item {
+			padding: 0.5rem;
+			opacity: 0;
+			text-align: right;
+			display: inline-block;
+		}
+
+		.corner-div-class {
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			font-weight: 600;
+			color: var(--color-1);
+			position: fixed;
+			z-index: 998;
+		}
+
+		#wrapper {
+			margin: auto;
+    	height: 100%;
+		}
+
+		#cont-1 {
+			max-width: 1200px;
+			margin: auto;
+			height: 100%;
+			bottom: 0;
+			position: relative;
+			padding: 0 2rem;
+		}
+
+		#cont-1 h1, #cont-1 p {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		#cont-1 .h1-div {
+			display: flex;
+		}
+
+		#cont-1 > div {
+			margin: 0 auto;
+			position: relative;
+			padding: 0;
+			top: calc(50% - 7rem);
+		}
+
+		#cont-1 > div > h1 {
+			font-size: 4.5rem;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			color: var(--color-1);
+			transition: all 1.3s ease;
+		}
+
+		::-moz-selection {
+			color: var(--color-white);
+			background-color: var(--color-black);
+		}
+
+		::selection {
+			color: var(--color-white);
+			background-color: var(--color-black);
+		}
+	</style>
+
+	<link rel="stylesheet" href="/src/css/main.css">
+	<link rel="stylesheet" href="/src/css/mouse.css">
+	<script src="src/bg-animation/main.js"></script>
+
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.3/dist/confetti.browser.min.js"></script>
+
+</head>
+
+<body>
+	<!-- all corner divs -->
+	<div id="cont-top-left" class="corner-div-class">
+		<div id="portfolio-text">
+			<div class="corner-div-padding">
+				<div class="link-hover-header">
+					<p>Developer</p>
+					<p>Portfolio</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="cont-bottom-right" class="corner-div-class">
+		<div class="corner-div-padding">
+			<div class="text-align-right">
+				<div class="nav-item link-hover">About</div>
+			</div>
+			<div class="text-align-right">
+				<div class="nav-item link-hover">Work</div>
+			</div>
+			<div class="text-align-right">
+				<div class="nav-item link-hover">Contact</div>
+			</div>
+		</div>
+	</div>
+	<div id="cont-bottom-left" class="corner-div-class">
+		<div id="theme-change-text">
+			<div class="corner-div-padding">
+				<div class="link-hover">
+					Change Theme
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- all divs end -->
+
+	<div id="wrapper">
+		<div id="cont-1">
+			<!-- bg animation canvas -->
+			<style>
+				#canvas-bg {
+					border: 1px solid rgb(211, 211, 211);
+					margin: auto;
+					position: fixed;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					z-index: -1000;
+					transition: background-color 1.3s ease;
+				}
+			</style>
+			<canvas id="canvas-bg">Your browser does not support the HTML5 Canvas API.</canvas>
+			<!-- bg animation canvas end -->
+			<div>
+				<h1>
+					<div class="h1-div">
+						<p>H</p>
+						<p>i,&nbsp;</p>
+						<p>I&nbsp;am</p>
+					</div>
+					<div class="h1-div">
+						<p>&nbsp;A</p>
+						<p>bhi</p>
+						<p>j</p>
+						<p>ee</p>
+						<p>t&nbsp;</p>
+						<p>S</p>
+						<p>in</p>
+						<p>gh</p>
+					</div>
+				</h1>
+			</div>
+			<div id="scroll-clue">
+				<span></span>
+			</div>
+		</div>
+
+		<div id="cont-2" class="cont-main">
+			<div>
+				<div>
+					<div class="cont-heading">About Me</div>
+						<p class="cont-paragraph">
+							I am a web developer based in Vancouver, BC.
+							I like building stro for audiences. I believe in creating pixel-perfect and performant products. 
+						</p>
+						<p class="cont-paragraph">
+							I completed my bachelor's degree in Information Technology in 2019, and joined the engineering team at Outlined as a Sofware Engineer.
+							Right now, I am completing my post-grad at Langara College.
+						</p>
+						<p class="cont-paragraph">
+							Here are some technologies I've been working with recently:
+							<ul class="cont-ul">
+								<li class="cont-li">JavaScript (ES6+)</li>
+								<li class="cont-li">HTML & CSS</li>
+								<li class="cont-li">Canvas API</li>
+								<li class="cont-li">FabricJS</li>
+								<li class="cont-li">Google, Box, DropBox APIs</li>
+								<li class="cont-li">LinkedIn, Twitter APIs</li>
+								<li class="cont-li">PHP & Laravel</li>
+								<li class="cont-li">MySQL</li>
+								<li class="cont-li">WordPress</li>
+							</ul>
+						</p>
+						<!-- <p class="cont-paragraph">
+							I am looking for <strong>part-time</strong> opportunities and paid internships in Vancouver. Open to remote work offers.
+						</p> -->
+				</div>
+				<div class="cont-image">
+					<img src="src/images/profile.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<div id="cont-3" class="cont-main">
+			<div>
+				<div>
+					<div class="cont-heading">Where I've Worked</div>
+					<div id="workplace-cont">
+						<div class="workplace-div">
+							<div class="cont-subheading">
+								Software Engineer <br class="screen-800-show"><a class="link-hover-reverse" href="https://outlined.co" target="_blank">@Outlined</a> <i style="opacity: 0.6;"> <br class="screen-800-show">(1.2 years)</i>
+							</div>
+							<div class="cont-paragraph">
+								<ul class="cont-ul">
+									<li class="cont-li">Developed and maintained the product website and application on <strong>PHP/Laravel</strong>.</li>
+									<li class="cont-li">Worked on <strong>FabricJS</strong> library to build custom features for the application.</li>
+									<li class="cont-li">Integrated the application with storage, social, sentiment analysis, stock content APIs.</li>
+									<li class="cont-li">Built a <strong>PDF to Canvas convertor</strong> to make designs saved as a PDF editable on a HTML canvas.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="workplace-div">
+							<div class="cont-subheading">
+								Web Developement Intern <br class="screen-800-show"><a class="link-hover-reverse" href="https://www.ahomtech.com/" target="_blank">@AHOM Technologies Pvt Ltd</a> <i style="opacity: 0.6;"> <br class="screen-800-show">(6 months)</i>
+							</div>
+							<div class="cont-paragraph">
+								<ul class="cont-ul">
+									<li class="cont-li">Built a <strong>PHP/Laravel</strong> project called "Eliphus", a library of books and learning resources for Post-Graduate students.</li>
+									<li class="cont-li">Created multi-level authentication system, along with a complete administration panel.</li>
+									<li class="cont-li">Worked on building data structures and <strong>MySQL</strong> queries.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="cont-heading">Projects I Have Built</div>
+					<div class="project-cont">
+						<div class="project-div">
+							<div class="cont-image">
+								<img src="/src/images/particle-network-js_screenshot.png" alt="">
+							</div>
+							<div class="cont-text">
+								<div class="cont-subheading">
+									<a class="link-hover-reverse" href="https://abjt14.github.io/particle-network-animation/" target="_blank">Particle Network Animation</a>
+								</div>
+								<div class="cont-paragraph">
+									An interactive <strong>Canvas API</strong> + <strong>JavaScript</strong> animation of random sized particles at random velocity.
+								</div>
+								<div class="cont-paragraph">
+									The spheres particles are connected by lines with stroke width depending on the connected particles and the distance between them. 
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="cont-4" class="cont-main">
+			<div>
+				<h2>I would love to work with you!!</h2>
+				<div>
+					<div class="screen-800-text-align-center">
+						<button id="copy-email" class="link-hover-contact" title="Copy Link" data-clipboard-text="abhijeetsinghmain@gmail.com" onclick="newAlert('Link copied to clipboard.', this.parentElement, 10000), runConfetti()">
+							abhijeetsinghmain<br class="screen-800-show">@gmail.com
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" x="0px" y="0px"><title>copy</title><g><path d="M26,5H12a2,2,0,0,0-2,2V9H7a2,2,0,0,0-2,2V25a2,2,0,0,0,2,2H21a2,2,0,0,0,2-2V23h3a2,2,0,0,0,2-2V7A2,2,0,0,0,26,5ZM21,25H7V11h3V21a2,2,0,0,0,2,2h9Zm2-4H12V7H26V21Z"/></g><text x="0" y="47" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Kawalan Icon</text><text x="0" y="52" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project: Icon source: https://thenounproject.com/kawalan.studio/</text></svg>
+						</button>
+					</div>
+					<div id="social-share-div">
+						<div class="link-hover-contact-div">
+							<a class="link-hover-contact hover-animate-text" target="_blank" href="mailto:abhijeetsinghmain@gmail.com" style="display: inline-flex;">
+								<p>e</p>
+								<p>m</p>
+								<p>a</p>
+								<p>i</p>
+								<p>l</p>
+							</a>
+						</div>
+						<div class="link-hover-contact-div">
+							<a class="link-hover-contact" target="_blank" href="https://www.linkedin.com/in/abjt14/">
+								linkedIn
+							</a>
+						</div>
+						<div class="link-hover-contact-div">
+							<a class="link-hover-contact" target="_blank" href="https://github.com/abjt14">
+								github
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- custom mouse divs-->
+	<div id="mouse-div">
+		<div id="mouse-dot"></div>
+		<div id="mouse-circle-1"></div>
+		<div id="mouse-circle-2"></div>
+	</div>
+	<!-- custom mouse divs end-->
+
+	<script src="src/main.js"></script>
+	<script>
+		// custom mouse script
+		const mouseDot = document.getElementById('mouse-dot');
+		const mouseCircle1 = document.getElementById('mouse-circle-1');
+		const mouseCircle2 = document.getElementById('mouse-circle-2');
+
+		document.body.addEventListener('mousemove', (event) => {
+			const x = event.clientX;
+			const y = event.clientY;
+
+			mouseDot.style.transform = `translate(${x - 9.5}px, ${y - 9.5}px) rotate(0.1deg)`;
+			mouseCircle1.style.transform = `translate(${x - 36.5}px, ${y - 36.5}px) scale(var(--mouse-circle1-scale)) rotate(0.1deg)`;
+			mouseCircle2.style.transform = `translate(${x - 40.5}px, ${y - 40.5}px) scale(var(--mouse-circle2-scale)) rotate(0.1deg)`;
+		});
+
+		document.body.addEventListener('mouseenter', (event) => {
+			mouseDot.style.opacity = 1;
+			mouseCircle1.style.opacity = 1;
+			mouseCircle2.style.opacity = 1;
+		});
+
+		document.body.addEventListener('mouseleave', (event) => {
+			mouseDot.style.opacity = 1;
+			mouseCircle1.style.opacity = 1;
+			mouseCircle2.style.opacity = 1;
+		});
+	</script>
+	<script>
+		// animate code
+		const animateIntro = () => {
+			const firsth1 = document.querySelector('h1');
+			const contTopLeft = document.querySelectorAll('#cont-top-left p');
+			const contBottomLeft = document.querySelector('#cont-bottom-left .corner-div-padding');
+			const contBottomRight = document.querySelectorAll('#cont-bottom-right .link-hover');
+			const scrollClue = document.getElementById('scroll-clue');
+
+			firsth1.querySelectorAll('p').forEach((el, index) => {
+				if(index % 2 == 0) {
+					el.style.animation = 'fadeInLeft';
+					el.style.animationDuration = '1.3s';
+				} else {
+					el.style.animation = 'fadeInRight';
+					el.style.animationDuration = '1.3s';
+				}
+			});
+
+			setTimeout(() => {
+				firsth1.querySelectorAll('p').forEach((el) => {
+					el.style = '';
+				});
+				const h1Subtext = document.createElement('h1');
+				h1Subtext.innerText = 'A developer based in Vancouver';
+				h1Subtext.style.animation = 'fadeIn';
+				h1Subtext.style.animationDuration = '1.3s';
+				firsth1.parentNode.appendChild(h1Subtext);
+
+				firsth1.setAttribute('style', 'transform: scale(.7)');
+
+				const navFirstAnimationTimeout = setTimeout(() => {
+					let index = 0;
+					contTopLeft.forEach((el1) => {
+						el1.setAttribute('style', `animation: flipInX; animation-duration: ${1.3}s; opacity: 1;`);
+						index++;
+					});
+					contBottomLeft.setAttribute('style', `animation: flipInX; animation-duration: ${1.3}s; opacity: 1;`);
+					index++;
+					contBottomRight.forEach((el1) => {
+						el1.setAttribute('style', `animation: flipInX; animation-duration: ${1.3}s; opacity: 1;`);
+						index++;
+					});
+					scrollClue.setAttribute('style', `animation: flipInX; animation-duration: ${1.3}s; opacity: 1;`);
+					index++;
+				}, 1000);
+			}, 2000);
+		}
+	</script>
+	<script>
+		// init
+		document.addEventListener('DOMContentLoaded', (event) => {
+			// animating background
+			canvasBgLoaded();
+
+			// animating cont 1
+			animateIntro();
+
+			// animate on scroll initialization
+			AOS.init();
+
+			//clipboard js
+			new ClipboardJS('#copy-email');
+		});
+	</script>
+</body>
+
+</html>
