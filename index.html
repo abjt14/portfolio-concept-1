@@ -24,7 +24,8 @@
 			max-width: 100%;
 			border-radius: 5px;
 			/* box-shadow: 0px 0px 3px var(--color-picture); */
-			box-shadow: 0 1px 1px var(--color-picture),
+			box-shadow: 0 0px 1px var(--color-picture),
+			0 1px 1px var(--color-picture),
 			0 2px 2px var(--color-picture),
 			0 4px 4px var(--color-picture),
 			0 8px 8px var(--color-picture),
@@ -39,19 +40,6 @@
 			--color-mouse: #ffffff;
 			--color-picture: rgba(0, 0, 0, 0.15);
 		}
-
-		/* hide scrollbar */
-		/* html {
-			overflow-y: scroll;
-			scrollbar-width: none;
-			-ms-overflow-style: none;
-		}
-
-		html::-webkit-scrollbar {
-			width: 0;
-			height: 0;
-		} */
-		/* hide scrollbar  end*/
 
 		.corner-div-padding {
 			padding: 4rem 5rem;
@@ -155,8 +143,6 @@
 	<link rel="stylesheet" href="/src/css/mouse.css">
 	<script src="src/bg-animation/main.js"></script>
 
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -316,6 +302,19 @@
 					<div class="project-cont">
 						<div class="project-div">
 							<div class="cont-image">
+								<img src="/src/images/animotion-css.png" alt="">
+							</div>
+							<div class="cont-text">
+								<div class="cont-subheading">
+									<a class="link-hover-reverse" href="https://abjt14.github.io/animotion-css/" target="_blank">Animotion.css</a>
+								</div>
+								<div class="cont-paragraph">
+									Animotion.css is a minimalistic CSS library to animate objects using transitions.
+								</div>
+							</div>
+						</div>
+						<div class="project-div">
+							<div class="cont-image">
 								<img src="/src/images/particle-network-js_screenshot.png" alt="">
 							</div>
 							<div class="cont-text">
@@ -463,9 +462,6 @@
 
 			// animating cont 1
 			animateIntro();
-
-			// animate on scroll initialization
-			AOS.init();
 
 			//clipboard js
 			new ClipboardJS('#copy-email');

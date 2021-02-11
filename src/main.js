@@ -102,32 +102,30 @@ function respondToVisibility(element, delay) {
 	observer.observe(element);
 }
 
-document.body.addEventListener('scroll', function(e) {
-	document.querySelectorAll('.cont-heading').forEach(element => {
-		if (!element.classList.contains('animate-cont-2')) {
-			respondToVisibility(element, 0);
-		}
-	});
-	document.querySelectorAll('.cont-subheading').forEach(element => {
-		if (!element.classList.contains('animate-cont-2')) {
-			respondToVisibility(element, 0.25);
-		}
-	});
-	document.querySelectorAll('.cont-paragraph').forEach(element => {
-		if (!element.classList.contains('animate-cont-2')) {
-			respondToVisibility(element, 0.5);
-		}
-	});
-	document.querySelectorAll('.cont-li').forEach(element => {
-		if (!element.classList.contains('animate-cont-2')) {
-			respondToVisibility(element, 0.75);
-		}
-	});
-	document.querySelectorAll('.cont-image').forEach(element => {
-		if (!element.classList.contains('animate-cont-2')) {
-			respondToVisibility(element, 1);
-		}
-	});
+document.querySelectorAll('.cont-heading').forEach(element => {
+	if (!element.classList.contains('animate-cont-2')) {
+		respondToVisibility(element, 0);
+	}
+});
+document.querySelectorAll('.cont-subheading').forEach(element => {
+	if (!element.classList.contains('animate-cont-2')) {
+		respondToVisibility(element, 0.25);
+	}
+});
+document.querySelectorAll('.cont-paragraph').forEach(element => {
+	if (!element.classList.contains('animate-cont-2')) {
+		respondToVisibility(element, 0.5);
+	}
+});
+document.querySelectorAll('.cont-li').forEach(element => {
+	if (!element.classList.contains('animate-cont-2')) {
+		respondToVisibility(element, 0.75);
+	}
+});
+document.querySelectorAll('.cont-image').forEach(element => {
+	if (!element.classList.contains('animate-cont-2')) {
+		respondToVisibility(element, 1);
+	}
 });
 
 
