@@ -4,7 +4,7 @@ This website is my developer portfolio.
 
 # Website
 
-abjt14.github.io/portfolio
+https://abjt14.github.io/portfolio
 
 
 ## License
