@@ -15,7 +15,7 @@
 }
 
 .cont-main > div {
-	max-width: 1000px;
+	max-width: 900px;
 	display: grid;
 	padding: 3rem;
 }
@@ -98,7 +98,7 @@
 .cont-ul {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 0.5rem;
+	grid-gap: 0.75rem;
 	padding: 0 0 0 1rem;
 	margin: 0;
 }
@@ -166,7 +166,7 @@
 }
 
 #cont-4 h2 {
-	font-size: 3.8rem;
+	font-size: 3.5rem;
 	font-weight: 600;
 	padding: 0 3rem 3rem 3rem;
 	color: var(--color-1);
@@ -399,7 +399,7 @@
 		font-size: 1rem;
 	}
 
-	#cont-2 > div {
+	#cont-3 > div {
 		max-width: 800px;
 	}
 
@@ -418,8 +418,12 @@
 	}
 
 	#cont-2 > div{
-		max-width: 800px;
+		max-width: 600px;
 		grid-template-columns: 1fr;
+	}
+
+	#cont-3 > div{
+		max-width: 600px;
 	}
 
 	#cont-4 h2 {
@@ -444,10 +448,14 @@
 	}
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
+
+	.corner-div-padding {
+    padding: 0.5rem 1rem;
+	}
 
 	#cont-1 > div {
-		top: calc(50% - 5rem);
+		top: calc(50% - 3rem);
 	}
 
 	#cont-1 div h1 {
@@ -479,7 +487,11 @@
 	}
 
 	#cont-2 > div{
-		max-width: 500px;
+		max-width: 400px;
+	}
+
+	#cont-3 > div {
+		max-width: 400px;
 	}
 
 	.corner-div-padding {
@@ -500,7 +512,7 @@
 	}
 
 	#cont-4 > div {
-		max-width: 500px;
+		max-width: 400px;
 		padding: 3rem;
 	}
 
@@ -529,6 +541,47 @@
 	/* remove hover */
 	#cont-4 a:hover, .link-hover:hover, .link-hover-header:hover p, .link-hover-contact:hover, #scroll-clue:hover, #scroll-clue span:hover {
 		background: none;
+	}
+
+}
+
+@media screen and (max-width: 800px) {
+
+	.corner-div-padding {
+		padding: 0rem 0.25rem;
+	}
+
+	#cont-top-left .link-hover-header {
+		writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    display: flex;
+	}
+
+	#cont-top-right {
+		display: block;
+	}
+
+	#cont-bottom-left {
+		display: none;
+	}
+
+	#cont-bottom-right {
+		display: none;
+	}
+
+	#cont-top-right .corner-div-padding {
+		padding: 1rem 1rem;
+	}
+
+	#cont-top-right .corner-div-padding p {
+		opacity: 0;
+    font-size: 3rem;
+    font-weight: 400;
+    writing-mode: vertical-rl;
+	}
+
+	#mobile-menu.active {
+		transform: translateX(0);
 	}
 
 }

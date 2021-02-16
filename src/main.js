@@ -2,6 +2,8 @@
 const rootEl = document.querySelector(':root');
 const portfolioText = document.querySelector('#portfolio-text .link-hover-header');
 const navItems = document.getElementsByClassName('nav-item');
+const mobileMenuToggle = document.querySelector('#cont-top-right p');
+const mobileMenuItems = document.querySelectorAll('#mobile-menu div');
 const scrollClue = document.getElementById('scroll-clue');
 const cont1 = document.getElementById('cont-1');
 const cont2 = document.getElementById('cont-2');
@@ -16,6 +18,9 @@ hoverElements.push(scrollClue);
 
 portfolioText.addEventListener('click', (event) => {
 	cont1.scrollIntoView();
+	if (document.querySelector('#mobile-menu').classList.contains('active')) {
+		document.querySelector('#mobile-menu').classList.remove('active');
+	}
 });
 
 scrollClue.addEventListener('click', (event) => {
@@ -32,6 +37,35 @@ navItems[1].addEventListener('click', (event) => {
 
 navItems[2].addEventListener('click', (event) => {
 	cont4.scrollIntoView();
+});
+
+mobileMenuToggle.addEventListener('click', (event) => {
+	document.querySelector('#mobile-menu').classList.toggle('active');
+});
+
+mobileMenuItems[0].addEventListener('click', (event) => {
+	cont2.scrollIntoView();
+	document.querySelector('#mobile-menu').classList.remove('active');
+});
+
+mobileMenuItems[1].addEventListener('click', (event) => {
+	cont3.scrollIntoView();
+	document.querySelector('#mobile-menu').classList.remove('active');
+});
+
+mobileMenuItems[2].addEventListener('click', (event) => {
+	cont4.scrollIntoView();
+	document.querySelector('#mobile-menu').classList.remove('active');
+});
+
+mobileMenuItems[3].addEventListener('click', (event) => {
+	if (selectedTheme < (colorThemes.length - 1)) {
+		selectedTheme++;
+	} else {
+		selectedTheme = 0;
+	}
+	colorSwitch();
+	document.querySelector('#mobile-menu').classList.remove('active');
 });
 
 hoverElements.forEach(element => {
