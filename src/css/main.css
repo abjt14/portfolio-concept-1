@@ -462,26 +462,6 @@
     font-size: 1.8rem;
 	}
 
-	* {
-		cursor: auto;
-	}
-
-	#mouse-dot {
-		display: none;
-	}
-
-	#mouse-circle-1 {
-		display: none;
-	}
-
-	#mouse-circle-2 {
-		display: none;
-	}
-
-	#scroll-clue {
-		display: none;
-	}
-
 	#cont-2 {
 		height: auto;
 	}
@@ -590,6 +570,26 @@
 
 	#mobile-menu.active {
 		transform: translateX(0);
+	}
+
+	* {
+		cursor: auto !important;
+	}
+
+	#mouse-dot {
+		display: none;
+	}
+
+	#mouse-circle-1 {
+		display: none;
+	}
+
+	#mouse-circle-2 {
+		display: none;
+	}
+
+	#scroll-clue {
+		display: none;
 	}
 
 }
