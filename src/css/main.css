@@ -580,7 +580,7 @@
     height: 3px;
     width: 3rem;
     background-color: var(--color-1);
-		transition: 1s all ease-in-out;
+		transition: 0.5s all ease-in-out;
 		transform: rotateZ(0) translateX(0);
 	}
 

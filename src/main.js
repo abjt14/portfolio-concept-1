@@ -17,13 +17,13 @@ for (const [key, value] of Object.entries(document.querySelectorAll('.link-hover
 hoverElements.push(scrollClue);
 
 portfolioText.addEventListener('click', (event) => {
-	cont1.scrollIntoView();
 	if (document.querySelector('#mobile-menu').classList.contains('active')) {
 		document.querySelector('#mobile-menu').classList.remove('active');
 	}
 	mobileMenuToggle.querySelectorAll('div').forEach(el => {
 		el.classList.toggle('active');
 	});
+	cont1.scrollIntoView();
 });
 
 scrollClue.addEventListener('click', (event) => {
@@ -50,27 +50,27 @@ mobileMenuToggle.addEventListener('click', (event) => {
 });
 
 mobileMenuItems[0].addEventListener('click', (event) => {
-	cont2.scrollIntoView();
 	document.querySelector('#mobile-menu').classList.remove('active');
 	mobileMenuToggle.querySelectorAll('div').forEach(el => {
 		el.classList.toggle('active');
 	});
+	cont2.scrollIntoView();
 });
 
 mobileMenuItems[1].addEventListener('click', (event) => {
-	cont3.scrollIntoView();
 	document.querySelector('#mobile-menu').classList.remove('active');
 	mobileMenuToggle.querySelectorAll('div').forEach(el => {
 		el.classList.toggle('active');
 	});
+	cont3.scrollIntoView();
 });
 
 mobileMenuItems[2].addEventListener('click', (event) => {
-	cont4.scrollIntoView();
 	document.querySelector('#mobile-menu').classList.remove('active');
 	mobileMenuToggle.querySelectorAll('div').forEach(el => {
 		el.classList.toggle('active');
 	});
+	cont4.scrollIntoView();
 });
 
 mobileMenuItems[3].addEventListener('click', (event) => {
