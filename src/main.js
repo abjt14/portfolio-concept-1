@@ -2,7 +2,7 @@
 const rootEl = document.querySelector(':root');
 const portfolioText = document.querySelector('#portfolio-text .link-hover-header');
 const navItems = document.getElementsByClassName('nav-item');
-const mobileMenuToggle = document.querySelector('#cont-top-right p');
+const mobileMenuToggle = document.querySelector('#cont-top-right .corner-div-padding');
 const mobileMenuItems = document.querySelectorAll('#mobile-menu div');
 const scrollClue = document.getElementById('scroll-clue');
 const cont1 = document.getElementById('cont-1');
@@ -21,6 +21,9 @@ portfolioText.addEventListener('click', (event) => {
 	if (document.querySelector('#mobile-menu').classList.contains('active')) {
 		document.querySelector('#mobile-menu').classList.remove('active');
 	}
+	mobileMenuToggle.querySelectorAll('div').forEach(el => {
+		el.classList.toggle('active');
+	});
 });
 
 scrollClue.addEventListener('click', (event) => {
@@ -40,22 +43,34 @@ navItems[2].addEventListener('click', (event) => {
 });
 
 mobileMenuToggle.addEventListener('click', (event) => {
+	mobileMenuToggle.querySelectorAll('div').forEach(el => {
+		el.classList.toggle('active');
+	});
 	document.querySelector('#mobile-menu').classList.toggle('active');
 });
 
 mobileMenuItems[0].addEventListener('click', (event) => {
 	cont2.scrollIntoView();
 	document.querySelector('#mobile-menu').classList.remove('active');
+	mobileMenuToggle.querySelectorAll('div').forEach(el => {
+		el.classList.toggle('active');
+	});
 });
 
 mobileMenuItems[1].addEventListener('click', (event) => {
 	cont3.scrollIntoView();
 	document.querySelector('#mobile-menu').classList.remove('active');
+	mobileMenuToggle.querySelectorAll('div').forEach(el => {
+		el.classList.toggle('active');
+	});
 });
 
 mobileMenuItems[2].addEventListener('click', (event) => {
 	cont4.scrollIntoView();
 	document.querySelector('#mobile-menu').classList.remove('active');
+	mobileMenuToggle.querySelectorAll('div').forEach(el => {
+		el.classList.toggle('active');
+	});
 });
 
 mobileMenuItems[3].addEventListener('click', (event) => {
@@ -66,6 +81,9 @@ mobileMenuItems[3].addEventListener('click', (event) => {
 	}
 	colorSwitch();
 	document.querySelector('#mobile-menu').classList.remove('active');
+	mobileMenuToggle.querySelectorAll('div').forEach(el => {
+		el.classList.toggle('active');
+	});
 });
 
 hoverElements.forEach(element => {

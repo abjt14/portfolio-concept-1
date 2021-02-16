@@ -143,7 +143,7 @@
 			width: 100%;
 			height: 100%;
 			transform: translateX(100%);
-			transition: 0.5s transform ease-in-out;
+			transition: transform 1s cubic-bezier(0.83, 0, 0.17, 1);
 			text-align: center;
 			background-color: var(--color-white);
 			z-index: 997;
@@ -199,7 +199,8 @@
 	</div>
 	<div id="cont-top-right" class="corner-div-class">
 		<div class="corner-div-padding">
-			<p>|||</p>
+			<div></div>
+			<div></div>
 		</div>
 	</div>
 	<div id="cont-bottom-right" class="corner-div-class">
@@ -454,7 +455,7 @@
 		const animateIntro = () => {
 			const firsth1 = document.querySelector('h1');
 			const contTopLeft = document.querySelectorAll('#cont-top-left p');
-			const contTopRight = document.querySelectorAll('#cont-top-right p');
+			const contTopRight = document.querySelectorAll('#cont-top-right .corner-div-padding div');
 			const contBottomLeft = document.querySelector('#cont-bottom-left .link-hover');
 			const contBottomRight = document.querySelectorAll('#cont-bottom-right .link-hover');
 			const scrollClue = document.getElementById('scroll-clue');

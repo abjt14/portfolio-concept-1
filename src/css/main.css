@@ -555,6 +555,7 @@
 		writing-mode: tb-rl;
     transform: rotate(-180deg);
     display: flex;
+		padding: 0.25rem 0;
 	}
 
 	#cont-top-right {
@@ -573,11 +574,18 @@
 		padding: 1rem 1rem;
 	}
 
-	#cont-top-right .corner-div-padding p {
+	#cont-top-right .corner-div-padding div {
 		opacity: 0;
-    font-size: 3rem;
-    font-weight: 400;
-    writing-mode: vertical-rl;
+    margin: 0 0 0.5rem 0;
+    height: 3px;
+    width: 3rem;
+    background-color: var(--color-1);
+		transition: 1s all ease-in-out;
+		transform: rotateZ(0) translateX(0);
+	}
+
+	#cont-top-right .corner-div-padding div.active {
+		transform: rotateZ(45deg) translateX(25%);
 	}
 
 	#mobile-menu.active {
